@@ -38,6 +38,8 @@ function submitButton() {
   const updateValue = countNew - 1;
   if (updateValue >= 0) {
     document.getElementById("counter").innerText = updateValue;
+  } else {
+    document.getElementById("counter").innerText = 3;
   }
 }
 
