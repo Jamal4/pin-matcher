@@ -18,42 +18,44 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input id="resultScreen" class="form-control" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div onclick="inputValue(7)" class="button">7</div>
+                              <div onclick="inputValue(8)" class="button">8</div>
+                              <div onclick="inputValue(9)" class="button">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div onclick="inputValue(4)"  class="button">4</div>
+                              <div onclick="inputValue(5)"  class="button">5</div>
+                              <div onclick="inputValue(6)"  class="button">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div onclick="inputValue(2)"  class="button">2</div>
+                              <div onclick="inputValue(1)"  class="button">1</div>
+                              <div onclick="inputValue(3)"  class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                              <div onclick="deleteSingleDigit()" class="button"><</div>
+                              <div onclick="inputValue(0)" class="button">0</div>
+                              <div onclick="clearAll()" class="button">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button onclick="submitButton()" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left"><span id="counter">3</span> try left</p>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        <div class="notify-section" >
+            <p class="notify" id="pin-noMatch">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify"id="pin-match">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
-    <script src="script.js"></script>
+       <script src="script.js"></script>
+
+       
 </body>
 </html>
